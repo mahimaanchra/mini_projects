@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(background\ for\ digital\ clock.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+}
+
+.clock{
+    margin-top: 190px;
+    width: 500px;
+   height: 170px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px 12px rgb(25, 25, 25) ;
+    margin-left: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.display{
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px ;
+    color: rgb(45, 46, 46);
+    font-weight: 550;}
+
+    .ampm{
+        font-size: 20px;
+         color: rgb(45, 46, 46);
+         margin-bottom: 30px;
+    }

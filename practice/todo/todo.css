@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgb(20, 95, 158);
+}
+
+.container{
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input-container{
+   max-width: 500px;
+    text-align: center;
+    padding: 20px;
+}
+.input-container input{
+    border: none;
+    outline: none;
+    padding: 12px;
+    margin-block: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.input-container h1{
+    color: rgb(239, 236, 229);
+    font-size: 35px;
+}
+.add{
+    background-color: rgb(43, 204, 43);
+    color: aliceblue;
+}
+.add:hover{
+    background-color: rgb(44, 253, 2);
+}
+ul{
+    width: 58%;
+    max-width: 450px;
+
+}
+
+ul li{
+    list-style-type: none;
+    border: 0.125px , solid , rgb(254, 248, 248) ;
+    margin-block-end: 12px;
+    padding: 6px 12px;
+    background-color: aliceblue;
+    border-radius: 4px;
+    color: rgb(57, 57, 55);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul li p {
+    flex-grow: 1;
+    padding: 2px;
+}
+
+.delBtn{
+    margin-left: 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgba(227, 4, 4, 0.952);
+    width: 65px;
+    height: 25px;
+    border-radius: 3px;
+}
+.editBtn{
+    margin-left: 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgb(19, 215, 9);
+    width: 45px;
+    height: 25px;
+    border-radius: 3px;
+    margin-right: -5px;
+}
