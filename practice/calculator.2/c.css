@@ -21,17 +21,32 @@ body{
     gap : 8px;
 }
 
-.calculator .output{
-    background-color: #609cc2 ;
+.calculator .output {
+    background-color: #609cc2;
     grid-column: 1/5;
-    color: white;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 40px;
-    padding: 20px;
     border-radius: 4px;
-    overflow-wrap: break-word;
+    padding: 20px;
+    /* Forces the box to stay perfectly rigid and masks any inner overflowing text */
+    overflow: hidden; 
+}
+
+/* 2. THE GLIDER: This handles ONLY the numbers moving inside the blue frame */
+.calculator .result {
+    color: white;
+    text-align: right; 
+    white-space: nowrap;
+    
+    /* Makes only the digits scrollable */
+    overflow-x: auto; 
+    scrollbar-width: none; /* Hides horizontal scrollbar track in Firefox */
+    
+    /* Keeps your beautiful dynamic fluid font resizing scale */
+    font-size: clamp(20px, 6vw, 40px); 
+}
+
+/* Hides horizontal scrollbar track in Chrome, Safari, and Edge browser engines */
+.calculator .result::-webkit-scrollbar {
+    display: none;
 }
 
 .calculator button{
