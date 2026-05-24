@@ -6,7 +6,7 @@ const resumeBtn= document.querySelector('.resumeBtn');
 const resetBtn = document.querySelector('.resetBtn');
 const pomoCountsDisplay = document.querySelector(".pomoCountsDisplay");
 const WORK_TIME = 25*60;
-const BREAK_TIME = 5*6;
+const BREAK_TIME = 5*60;
 let paused = false;
 
 let timerID = null;
@@ -34,8 +34,8 @@ const countDown = (time) => {
    if(time<0){
     stopTimer();
     if(oneRoundCompleted===false){
+        oneRoundCompleted = true;
   timerID = startTimer(BREAK_TIME);
-  oneRoundCompleted = true;
   updateTitle("It's Break Time!")
     }else{
         updateTitle("Completed 1 Round of Pomodoro Technique!");
@@ -43,6 +43,7 @@ const countDown = (time) => {
         totalCount++;
         saveLocalCounts();
         showPomoCounts();
+        oneRoundCompleted = false;
     }
   
    }
@@ -94,11 +95,12 @@ paused = false;
 
 const showPomoCounts = () => {
 const counts = JSON.parse(localStorage.getItem("pomoCounts"));
-if(counts>0){
-    pomoCountsDisplay.style.display = "flex";
-}
-pomoCountsDisplay.firstElementChild.textContent = counts;
-}
+if (counts !== null && counts > 0) {
+        pomoCountsDisplay.style.display = "flex";
+        pomoCountsDisplay.firstElementChild.textContent = counts;
+    } else {
+        pomoCountsDisplay.style.display = "none";
+        }
 
 showPomoCounts();
-
+}
